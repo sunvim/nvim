@@ -32,5 +32,7 @@ autocmd("BufWritePost", {
       vim.api.nvim_command("source lua/plugins.lua")
       vim.api.nvim_command("PackerSync")
     end
-  end,
+  end
 })
+
+vim.api.nvim_command("autocmd BufWritePost *.go GoBuild")
