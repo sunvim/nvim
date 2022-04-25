@@ -16,16 +16,10 @@ autocmd("BufEnter", {
 })
 
 
--- 进入Terminal 自动进入插入模式
-autocmd("TermOpen", {
-  group = myAutoGroup,
-  command = "startinsert",
-})
-
 -- 保存时自动格式化
 autocmd("BufWritePre", {
   group = myAutoGroup,
-  pattern = { "*.lua", "*.py", "*.sh" },
+  pattern = { "*.lua", "*.py", "*.sh",  "*.go", "*.rs"},
   callback = vim.lsp.buf.formatting_sync,
 })
 
