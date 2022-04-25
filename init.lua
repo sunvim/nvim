@@ -17,7 +17,6 @@ require("plugin-config.dashboard")
 require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
 require("plugin-config.indent-blankline")
-require("plugin-config.toggleterm")
 require("plugin-config.surround")
 require("plugin-config.comment")
 require("plugin-config.nvim-autopairs")
@@ -25,6 +24,7 @@ require("plugin-config.license")
 require("plugin-config.gitlens")
 require("plugin-config.tagbar")
 require("plugin-config.term")
+
 -- Git
 require("plugin-config.gitsigns")
 -- 内置LSP

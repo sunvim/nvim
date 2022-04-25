@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://hub.fastgit.xyz/rafamadriz/friendly-snippets"
   },
+  fzf = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://hub.fastgit.xyz/junegunn/fzf"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -193,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://hub.fastgit.xyz/windwp/nvim-autopairs"
+  },
+  ["nvim-bqf"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-bqf",
+    url = "https://hub.fastgit.xyz/kevinhwang91/nvim-bqf"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -288,11 +298,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://hub.fastgit.xyz/nvim-telescope/telescope.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    loaded = true,
-    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://hub.fastgit.xyz/akinsho/toggleterm.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

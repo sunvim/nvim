@@ -82,8 +82,8 @@ map("n", "<leader>j", "<C-w>j", opt)
 map("n", "<leader>k", "<C-w>k", opt)
 map("n", "<leader>l", "<C-w>l", opt)
 -- 左右比例控制
-map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
-map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
+map("n", "<C-Left>", ":vertical resize +2<CR>", opt)
+map("n", "<C-Right>", ":vertical resize -2<CR>", opt)
 map("n", "s,", ":vertical resize -20<CR>", opt)
 map("n", "s.", ":vertical resize +20<CR>", opt)
 -- 上下比例
@@ -94,20 +94,6 @@ map("n", "<C-Up>", ":resize -2<CR>", opt)
 -- 相等比例
 map("n", "s=", "<C-w>=", opt)
 
--- Terminal相关
-map("n", "st", ":sp | terminal<CR>", opt)
-map("n", "stv", ":vsp | terminal<CR>", opt)
--- Esc 回 Normal 模式
-map("t", "<Esc>", "<C-\\><C-n>", opt)
-map("t", "<A-h>", [[ <C-\><C-N><C-w>h ]], opt)
-map("t", "<A-j>", [[ <C-\><C-N><C-w>j ]], opt)
-map("t", "<A-k>", [[ <C-\><C-N><C-w>k ]], opt)
-map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opt)
-map("t", "<leader>h", [[ <C-\><C-N><C-w>h ]], opt)
-map("t", "<leader>j", [[ <C-\><C-N><C-w>j ]], opt)
-map("t", "<leader>k", [[ <C-\><C-N><C-w>k ]], opt)
-map("t", "<leader>l", [[ <C-\><C-N><C-w>l ]], opt)
---------------------------------------------------------------------
 -- 插件快捷键
 local pluginKeys = {}
 
@@ -117,7 +103,6 @@ map("n", "Z", ":foldopen<CR>", opt)
 
 -- nvim-tree
 map("n", "<C-e>", ":NvimTreeToggle<CR>", opt)
-map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = { -- 打开文件或文件夹
   { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
@@ -241,15 +226,6 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
   mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
   mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
-  -- 未用
-  -- mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
-  -- mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
-  -- mapbuf('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opt)
-  -- mapbuf("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opt)
-  -- mapbuf('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opt)
-  -- mapbuf('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opt)
-  -- mapbuf('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
-  -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 end
 
 -- typescript 快捷键

@@ -70,7 +70,16 @@ packer.startup({
     use("ahmedkhalf/project.nvim")
     -- termial integration
     use 'akinsho/nvim-toggleterm.lua'
-    
+
+    -- quickfix
+    use {'kevinhwang91/nvim-bqf'}
+
+   -- optional
+   use {'junegunn/fzf', run = function()
+          vim.fn['fzf#install']()
+        end
+    }
+
     -- treesitter
     use({
       "nvim-treesitter/nvim-treesitter",
@@ -132,7 +141,6 @@ packer.startup({
     use("EdenEast/nightfox.nvim")
 
     -------------------------------------------------------
-    use({ "akinsho/toggleterm.nvim" })
     -- surround
     use("ur4ltz/surround.nvim")
     -- Comment
