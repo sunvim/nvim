@@ -71,8 +71,6 @@ packer.startup({
     -- termial integration
     use 'akinsho/nvim-toggleterm.lua'
 
-    -- quickfix
-    use {'kevinhwang91/nvim-bqf'}
 
    -- optional
    use {'junegunn/fzf', run = function()

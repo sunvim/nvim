@@ -199,11 +199,6 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://hub.fastgit.xyz/windwp/nvim-autopairs"
   },
-  ["nvim-bqf"] = {
-    loaded = true,
-    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-bqf",
-    url = "https://hub.fastgit.xyz/kevinhwang91/nvim-bqf"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-cmp",
