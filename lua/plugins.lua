@@ -34,6 +34,7 @@ packer.startup({
   function(use)
     -- Packer 可以升级自己
     use("wbthomason/packer.nvim")
+     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     -------------------------- plugins -------------------------------------------
     -- nvim-tree
     use({
@@ -57,13 +58,40 @@ packer.startup({
       requires = { "kyazdani42/nvim-web-devicons" },
     })
     use("arkav/lualine-lsp-progress")
+
+    -- Debugger
+  use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
+  use {
+    "ravenxrz/nvim-dap",
+    commit = "f9480362549e2b50a8616fe4530deaabbc4f889b",
+  }
+  use "theHamsta/nvim-dap-virtual-text"
+  use "rcarriga/nvim-dap-ui"
+  use "nvim-telescope/telescope-file-browser.nvim"
+  use "mfussenegger/nvim-dap-python"    -- debug python
+  use { "leoluz/nvim-dap-go", module = "dap-go" } -- debug golang
+  use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
+
+
     -- telescope
     use({
       "nvim-telescope/telescope.nvim",
       requires = { "nvim-lua/plenary.nvim" },
     })
-    -- telescope extensions
     use("LinArcX/telescope-env.nvim")
+    use {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      run = "make",
+    }
+    use {
+        "nvim-telescope/telescope-frecency.nvim",
+        requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
+      }
+    use "nvim-telescope/telescope-ui-select.nvim"
+    use "nvim-telescope/telescope-live-grep-raw.nvim"
+    use "MattesGroeger/vim-bookmarks"
+    use "tom-anders/telescope-vim-bookmarks.nvim"
+    use "nvim-telescope/telescope-dap.nvim"
     -- dashboard-nvim
     use("glepnir/dashboard-nvim")
     -- project
@@ -88,6 +116,14 @@ packer.startup({
     use("lukas-reineke/indent-blankline.nvim")
         -- license
     use 'antoyo/vim-licenses'
+
+    use "vim-test/vim-test"
+    use {
+       "rcarriga/vim-ultest",
+       run = ":UpdateRemotePlugins"
+    }
+
+    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
 
     --------------------- LSP --------------------
     -- Lspconfig

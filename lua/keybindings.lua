@@ -145,28 +145,22 @@ map("n", "<leader>bo", ":BufferLineCloseRight<CR>:BufferLineCloseLeft<CR>", opt)
 -- 关闭选中标签页
 map("n", "<leader>bp", ":BufferLinePickClose<CR>", opt)
 
+-- unit test
+map("n", "<leader>rr", "<cmd>UltestNearest<cr>", opt)
+map("n", "<leader>rd", "<cmd>UltestDebugNearest<cr>", opt)
+
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
--- Telescope 列表中 插入模式快捷键
-pluginKeys.telescopeList = {
-  i = {
-    -- 上下移动
-    ["<C-j>"] = "move_selection_next",
-    ["<C-k>"] = "move_selection_previous",
-    ["<C-n>"] = "move_selection_next",
-    ["<C-p>"] = "move_selection_previous",
-    -- 历史记录
-    ["<Down>"] = "cycle_history_next",
-    ["<Up>"] = "cycle_history_prev",
-    -- 关闭窗口
-    -- ["<esc>"] = actions.close,
-    ["<C-c>"] = "close",
-    -- 预览窗口上下滚动
-    ["<C-u>"] = "preview_scrolling_up",
-    ["<C-d>"] = "preview_scrolling_down",
-  },
-}
+
+-- sniprun
+map("n", "<leader>rf", ":%SnipRun<cr>", opt)
+map("v", "<leader>rs", ":%SnipRun<cr>", opt)
+
+
+-- bookmark's
+map("n", "ma", "<cmd>Telescope vim_bookmarks current_file<cr>", opt)
+map("n", "mA", "<cmd>Telescope vim_bookmarks all<cr>", opt)
 
 -- 代码注释插件
 -- see ./lua/plugin-config/comment.lua

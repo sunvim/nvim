@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://hub.fastgit.xyz/numToStr/Comment.nvim"
   },
+  ["DAPInstall.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/DAPInstall.nvim",
+    url = "https://hub.fastgit.xyz/ravenxrz/DAPInstall.nvim"
+  },
   ["blamer.nvim"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/blamer.nvim",
@@ -204,6 +209,33 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://hub.fastgit.xyz/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://hub.fastgit.xyz/ravenxrz/nvim-dap"
+  },
+  ["nvim-dap-go"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/opt/nvim-dap-go",
+    url = "https://hub.fastgit.xyz/leoluz/nvim-dap-go"
+  },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
+    url = "https://hub.fastgit.xyz/mfussenegger/nvim-dap-python"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://hub.fastgit.xyz/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-dap-virtual-text"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    url = "https://hub.fastgit.xyz/theHamsta/nvim-dap-virtual-text"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -249,6 +281,13 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/oceanic-next",
     url = "https://hub.fastgit.xyz/mhartington/oceanic-next"
   },
+  ["one-small-step-for-vimkind"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/opt/one-small-step-for-vimkind",
+    url = "https://hub.fastgit.xyz/jbyuki/one-small-step-for-vimkind"
+  },
   ["onedark.nvim"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/onedark.nvim",
@@ -264,6 +303,11 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://hub.fastgit.xyz/nvim-lua/plenary.nvim"
   },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://hub.fastgit.xyz/nvim-lua/popup.nvim"
+  },
   ["project.nvim"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/project.nvim",
@@ -273,6 +317,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "https://hub.fastgit.xyz/b0o/schemastore.nvim"
+  },
+  sniprun = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/sniprun",
+    url = "https://hub.fastgit.xyz/michaelb/sniprun"
+  },
+  ["sqlite.lua"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/sqlite.lua",
+    url = "https://hub.fastgit.xyz/tami5/sqlite.lua"
   },
   ["surround.nvim"] = {
     loaded = true,
@@ -284,10 +338,45 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/tagbar",
     url = "https://hub.fastgit.xyz/preservim/tagbar"
   },
+  ["telescope-dap.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://hub.fastgit.xyz/nvim-telescope/telescope-dap.nvim"
+  },
   ["telescope-env.nvim"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-env.nvim",
     url = "https://hub.fastgit.xyz/LinArcX/telescope-env.nvim"
+  },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://hub.fastgit.xyz/nvim-telescope/telescope-file-browser.nvim"
+  },
+  ["telescope-frecency.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim",
+    url = "https://hub.fastgit.xyz/nvim-telescope/telescope-frecency.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://hub.fastgit.xyz/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-live-grep-raw.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-live-grep-raw.nvim",
+    url = "https://hub.fastgit.xyz/nvim-telescope/telescope-live-grep-raw.nvim"
+  },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://hub.fastgit.xyz/nvim-telescope/telescope-ui-select.nvim"
+  },
+  ["telescope-vim-bookmarks.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-vim-bookmarks.nvim",
+    url = "https://hub.fastgit.xyz/tom-anders/telescope-vim-bookmarks.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -304,6 +393,11 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://hub.fastgit.xyz/moll/vim-bbye"
   },
+  ["vim-bookmarks"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/vim-bookmarks",
+    url = "https://hub.fastgit.xyz/MattesGroeger/vim-bookmarks"
+  },
   ["vim-go"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/vim-go",
@@ -314,6 +408,16 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/vim-licenses",
     url = "https://hub.fastgit.xyz/antoyo/vim-licenses"
   },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://hub.fastgit.xyz/vim-test/vim-test"
+  },
+  ["vim-ultest"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/vim-ultest",
+    url = "https://hub.fastgit.xyz/rcarriga/vim-ultest"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/vim-vsnip",
@@ -322,6 +426,35 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+local module_lazy_loads = {
+  ["^dap%-go"] = "nvim-dap-go",
+  ["^osv"] = "one-small-step-for-vimkind"
+}
+local lazy_load_called = {['packer.load'] = true}
+local function lazy_load_module(module_name)
+  local to_load = {}
+  if lazy_load_called[module_name] then return nil end
+  lazy_load_called[module_name] = true
+  for module_pat, plugin_name in pairs(module_lazy_loads) do
+    if not _G.packer_plugins[plugin_name].loaded and string.match(module_name, module_pat) then
+      to_load[#to_load + 1] = plugin_name
+    end
+  end
+
+  if #to_load > 0 then
+    require('packer.load')(to_load, {module = module_name}, _G.packer_plugins)
+    local loaded_mod = package.loaded[module_name]
+    if loaded_mod then
+      return function(modname) return loaded_mod end
+    end
+  end
+end
+
+if not vim.g.packer_custom_loader_enabled then
+  table.insert(package.loaders, 1, lazy_load_module)
+  vim.g.packer_custom_loader_enabled = true
+end
+
 if should_profile then save_profiles() end
 
 end)

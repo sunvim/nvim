@@ -24,6 +24,7 @@ require("plugin-config.license")
 require("plugin-config.gitlens")
 require("plugin-config.tagbar")
 require("plugin-config.term")
+require("plugin-config.sniprun")
 
 -- Git
 require("plugin-config.gitsigns")
