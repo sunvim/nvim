@@ -333,11 +333,6 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/surround.nvim",
     url = "https://hub.fastgit.xyz/ur4ltz/surround.nvim"
   },
-  tagbar = {
-    loaded = true,
-    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/tagbar",
-    url = "https://hub.fastgit.xyz/preservim/tagbar"
-  },
   ["telescope-dap.nvim"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
@@ -422,6 +417,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://hub.fastgit.xyz/hrsh7th/vim-vsnip"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://hub.fastgit.xyz/folke/which-key.nvim"
   }
 }
 

@@ -22,9 +22,9 @@ require("plugin-config.comment")
 require("plugin-config.nvim-autopairs")
 require("plugin-config.license")
 require("plugin-config.gitlens")
-require("plugin-config.tagbar")
 require("plugin-config.term")
 require("plugin-config.sniprun")
+require("plugin-config.which-key")
 
 -- Git
 require("plugin-config.gitsigns")

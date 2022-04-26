@@ -47,8 +47,6 @@ packer.startup({
       requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" },
     })
 
-    -- tagbar
-    use 'preservim/tagbar'
 
     --git lens
    use 'APZelos/blamer.nvim'
@@ -105,6 +103,9 @@ packer.startup({
           vim.fn['fzf#install']()
         end
     }
+
+  -- which-key
+  use "folke/which-key.nvim" 
 
     -- treesitter
     use({
