@@ -105,7 +105,7 @@ packer.startup({
     }
 
   -- which-key
-  use "folke/which-key.nvim" 
+  use ("folke/which-key.nvim")
 
     -- treesitter
     use({

@@ -1,6 +1,6 @@
 local status, lualine = pcall(require, "lualine")
 if not status then
-  vim.notify("没有找到 lualine")
+  vim.notify("not found lualine")
   return
 end
 
@@ -23,13 +23,14 @@ lualine.setup({
   },
   extensions = { "nvim-tree" },
   sections = {
-    lualine_c = {
+    lualine_c = {{
       "filename",
+       path = 1,
       {
         "lsp_progress",
         spinner_symbols = { " ", " ", " ", " ", " ", " " },
       },
-    },
+    }},
     lualine_x = {
       "filesize",
       {

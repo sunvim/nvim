@@ -9,4 +9,3 @@ vim.g.go_metalinter_autosave_enabled = "['vet','revive','errcheck','staticcheck'
 vim.g.go_metalinter_deadline = "2s"
 vim.g.go_fmt_command = "goimports"
 vim.g.go_auto_sameids = 1
-vim.g.go_auto_type_info = 1

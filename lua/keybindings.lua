@@ -180,54 +180,6 @@ pluginKeys.comment = {
 map("n", "<C-_>", "gcc", { noremap = false })
 map("v", "<C-_>", "gcc", { noremap = false })
 
--- lsp 回调函数快捷键设置
-pluginKeys.mapLSP = function(mapbuf)
-  -- rename
-  --[[
-  Lspsaga 替换 rn
-  mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
-  --]]
-  mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
-  -- code action
-  --[[
-  Lspsaga 替换 ca
-  mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
-  --]]
-  mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
-  -- go xx
-  --[[
-    mapbuf('n', 'gd', '<cmd>Lspsaga preview_definition<CR>', opt)
-  --]]
-  mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
-  --[[
-  Lspsaga 替换 gh
-  mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
-  --]]
-  mapbuf("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
-  --[[
-  Lspsaga 替换 gr
-  mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
-  --]]
-  mapbuf("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opt)
-  --[[
-  Lspsaga 替换 gp, gj, gk
-  mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
-  mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
-  mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
-  --]]
-  -- diagnostic
-  mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
-  mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
-  mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
-  mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
-end
-
--- typescript 快捷键
-pluginKeys.mapTsLSP = function(mapbuf)
-  mapbuf("n", "gs", ":TSLspOrganize<CR>", opt)
-  mapbuf("n", "gr", ":TSLspRenameFile<CR>", opt)
-  mapbuf("n", "gi", ":TSLspImportAll<CR>", opt)
-end
 
 -- nvim-cmp 自动补全
 pluginKeys.cmp = function(cmp)
