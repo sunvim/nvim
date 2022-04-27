@@ -1,6 +1,6 @@
 local status, surround = pcall(require, "surround")
 if not status then
-  vim.notify("没有找到 surround")
+  vim.notify("not found surround")
   return
 end
 

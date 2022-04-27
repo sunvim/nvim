@@ -10,8 +10,7 @@ local servers = {
   tsserver = require("lsp.config.ts"),
   pyright = require("lsp.config.pyright"),
   gopls = require("lsp.config.vim-go"),
-  rust_analyzer = require("lsp.config.rust"),
-  -- remark_ls = require("lsp.lang.markdown"),
+   rust_analyzer = require("lsp.config.rust"),
 }
 
 -- 自动安装 Language Servers

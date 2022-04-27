@@ -6,7 +6,7 @@
 
 local status, project = pcall(require, "project_nvim")
 if not status then
-  vim.notify("没有找到 project_nvim")
+  vim.notify("not found project_nvim")
   return
 end
 
@@ -18,7 +18,7 @@ project.setup({
 
 local status, telescope = pcall(require, "telescope")
 if not status then
-  vim.notify("没有找到 telescope")
+  vim.notify("not found telescope")
   return
 end
 pcall(telescope.load_extension, "projects")
