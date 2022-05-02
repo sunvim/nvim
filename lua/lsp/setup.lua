@@ -5,12 +5,11 @@ local servers = {
   bashls = require("lsp.config.bash"),
   html = require("lsp.config.html"),
   cssls = require("lsp.config.css"),
-  emmet_ls = require("lsp.config.emmet"),
   jsonls = require("lsp.config.json"),
-  tsserver = require("lsp.config.ts"),
+  denols = require("lsp.config.denols"),
   pyright = require("lsp.config.pyright"),
   gopls = require("lsp.config.vim-go"),
-   rust_analyzer = require("lsp.config.rust"),
+  rust_analyzer = require("lsp.config.rust"),
 }
 
 -- 自动安装 Language Servers
@@ -26,15 +25,16 @@ end
 
 
 
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>gD', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gl', '<cmd>lua vim.diagnostic.open_float()', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
@@ -48,12 +48,13 @@ end
 
 
 -- LSP settings (for overriding per client)
-local handlers =  {
-  ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = "rounded"}),
-  ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = "rounded" }),
+local handlers = {
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 
-lsp_installer.on_server_ready(function(server)
+lsp_installer.on_server_ready(
+  function(server)
   local config = servers[server.name]
   if config == nil then
     return
@@ -65,7 +66,8 @@ lsp_installer.on_server_ready(function(server)
     -- 使用默认参数
     server:setup({
       on_attach = on_attach,
-      handlers=handlers
+      handlers = handlers
     })
   end
-end)
+end
+)
