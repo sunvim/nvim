@@ -81,7 +81,7 @@ packer.startup({
 		})
 		use({
 			"nvim-telescope/telescope-frecency.nvim",
-			requires = { "tami5/sqlite.lua" },   -- NOTE: need to install sqlite lib
+			requires = { "tami5/sqlite.lua" }, -- NOTE: need to install sqlite lib
 		})
 		use("nvim-telescope/telescope-ui-select.nvim")
 		use("nvim-telescope/telescope-live-grep-raw.nvim")

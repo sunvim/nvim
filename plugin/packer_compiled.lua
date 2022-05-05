@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://hub.fastgit.xyz/APZelos/blamer.nvim"
   },
+  ["bracey.vim"] = {
+    loaded = true,
+    path = "/home/mobus/.local/share/nvim/site/pack/packer/start/bracey.vim",
+    url = "https://hub.fastgit.xyz/turbio/bracey.vim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/mobus/.local/share/nvim/site/pack/packer/start/bufferline.nvim",

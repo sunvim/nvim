@@ -18,7 +18,6 @@ formatter.setup({
 			end,
 		},
 		rust = {
-			-- Rustfmt
 			function()
 				return {
 					exe = "rustfmt",
@@ -28,7 +27,24 @@ formatter.setup({
 			end,
 		},
 		javascript = {
-			-- prettier
+			function()
+				return {
+					exe = "prettier",
+					args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--single-quote" },
+					stdin = true,
+				}
+			end,
+		},
+		html = {
+			function()
+				return {
+					exe = "prettier",
+					args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--single-quote" },
+					stdin = true,
+				}
+			end,
+		},
+		typescript = {
 			function()
 				return {
 					exe = "prettier",
@@ -44,7 +60,7 @@ vim.api.nvim_exec(
 	[[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.js,*.rs,*.lua FormatWrite
+  autocmd BufWritePost *html,*.ts,*.js,*.rs,*.lua FormatWrite
 augroup END
 ]],
 	true
